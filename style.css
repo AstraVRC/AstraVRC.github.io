@@ -67,22 +67,18 @@ main{
 .links{
     height:20%;
     margin-top: 2%;
-    width: 100;
+    width: 100%;
     position:relative;
     z-index: 10;
 }
 .links-text{
     color:#CCCCCC;
-    font-size: 1vw;
-}
-a{
-    color: inherit;
-    text-decoration: inherit;
+    font-size: 0.9vw;
 }
 .space-even{
     display: flex;
     width: 60%;
-    margin-left: 4%;
+    margin-left: 2%;
     margin-right: 5%;
     float: right;
     justify-content: space-between;
@@ -93,9 +89,72 @@ a{
     float:left;
     opacity: 50%;
 }
+
 .notice{
     bottom:0;
     position: absolute;
     opacity: 20%;
     font-size: 95%;
 }
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+    transition: all 0.3s ease-in-out;
+}
+a:hover{
+    transform: scale(1.1,1.1);
+    text-shadow: 0 0 3px white;
+}
+
+.main-name{
+    animation-name: bounce_glow_text;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.right-side, .left-side{
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out
+}
+.effects{
+    bottom: -3vw;
+    right: -3vw;
+    position: absolute;
+    overflow: visible;
+}
+.white-glow{
+    position: absolute;
+    box-shadow: 0 0 6vw 1vw #FFFFFF;
+    transform: translateY(-3vw);
+    right:3.3%;
+    width: 65%;
+}
+
+.sunset-glow{
+    background-color: #FFFFFF00;
+
+    height: 3vw;
+    width: 3vw;
+    border-radius: 0%;
+    opacity: 50%;
+    box-shadow:
+    0 0 15vw 5vw #FFFFFFCC,
+    0 0 15.5vw 7vw #FFFF00CC,
+    0 0 15vw 8vw #FF00FFCC;
+}
+.sunset-glow:hover{
+    transform: scale(1.24);
+}
+
+@keyframes appear{
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+} 
+@keyframes bounce_glow_text {
+    0% {text-shadow: 0 0 5vw #000000;}
+    5% {text-shadow: 0 0 5vw rgb(255, 255, 255);}
+    100% {text-shadow: 0 0 5vw #000000;}
+  }
