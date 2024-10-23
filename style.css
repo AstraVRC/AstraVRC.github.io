@@ -93,3 +93,9 @@ a{
     float:left;
     opacity: 50%;
 }
+.notice{
+    bottom:0;
+    position: absolute;
+    opacity: 20%;
+    font-size: 95%;
+}
