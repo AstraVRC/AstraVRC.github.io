@@ -68,6 +68,8 @@ main{
     height:20%;
     margin-top: 2%;
     width: 100;
+    position:relative;
+    z-index: 10;
 }
 .links-text{
     color:#CCCCCC;
