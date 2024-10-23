@@ -102,9 +102,19 @@ a{
     text-decoration: inherit;
     transition: all 0.3s ease-in-out;
 }
+.description{
+    position: absolute;
+}
 a:hover{
     transform: scale(1.1,1.1);
     text-shadow: 0 0 3px white;
+}
+.raise{
+    position: absolute;
+    left:1.4vw;
+}
+.raise:hover{
+    transform: translateY(-0.2vw);
 }
 
 .main-name{
@@ -114,16 +124,18 @@ a:hover{
     animation-timing-function: ease-in-out;
 }
 
-.right-side, .left-side{
+.fade-in{
     animation-name: appear;
     animation-duration: 1s;
     animation-timing-function: ease-in-out
 }
 .effects{
-    bottom: -3vw;
-    right: -3vw;
+    bottom: -0.5vw;
+    right: -1vw;
     position: absolute;
-    overflow: visible;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out
 }
 .white-glow{
     position: absolute;
@@ -132,18 +144,44 @@ a:hover{
     right:3.3%;
     width: 65%;
 }
-
-.sunset-glow{
-    background-color: #FFFFFF00;
-
-    height: 3vw;
-    width: 3vw;
+.overflow{
+    overflow: visible;
+}
+.midnight-glow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    transform: translate(-25vw, -10vw);
     border-radius: 0%;
-    opacity: 50%;
+    opacity: 35%;
     box-shadow:
-    0 0 15vw 5vw #FFFFFFCC,
-    0 0 15.5vw 7vw #FFFF00CC,
-    0 0 15vw 8vw #FF00FFCC;
+    0 0 10vw 5vw #ffd7ff,
+    0 0 15.5vw 10vw #fb00ff,
+    0 0 15vw 11vw #611b9e;
+}
+.bluesky-glow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    transform: translate(-10vw, -25vw);
+    border-radius: 0%;
+    opacity: 40%;
+    box-shadow:
+    0 0 12vw 5vw #FFFFFF,
+    0 0 21vw 10vw #0055ff,
+    0 0 10vw 11vw #c3cfff;
+}
+.sunset-glow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    transform: translate(-3vw, -3vw);
+    border-radius: 0%;
+    opacity: 70%;
+    box-shadow:
+    0 0 15vw 8vw #FFFFFF,
+    0 0 15.5vw 10vw #FFFF00,
+    0 0 15vw 11vw #FF00FF;
 }
 .sunset-glow:hover{
     transform: scale(1.24);
@@ -158,3 +196,7 @@ a:hover{
     5% {text-shadow: 0 0 5vw rgb(255, 255, 255);}
     100% {text-shadow: 0 0 5vw #000000;}
   }
+@keyframes rotate{
+    from {transform:rotate(0d);}
+    to {transform: rotate(360d);}
+}
