@@ -1,4 +1,3 @@
-
 body{
     background-color: #0F0F0F;
     overflow:hidden;
@@ -102,12 +101,14 @@ a{
     text-decoration: inherit;
     transition: all 0.3s ease-in-out;
 }
-.description{
-    position: absolute;
-}
 a:hover{
     transform: scale(1.1,1.1);
     text-shadow: 0 0 3px white;
+}
+
+
+.description{
+    position: absolute;
 }
 .raise{
     position: absolute;
@@ -116,13 +117,14 @@ a:hover{
 .raise:hover{
     transform: translateY(-0.2vw);
 }
-
 .main-name{
     animation-name: bounce_glow_text;
     animation-duration: 20s;
+    animation-delay: 1s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
+
 
 .fade-in{
     animation-name: appear;
@@ -144,6 +146,18 @@ a:hover{
     animation-duration: 3s;
     animation-timing-function: ease-in-out
 }
+.fade-in-lower-text{
+    animation-name: appear-lower-text;
+    animation-duration: 3s;
+    animation-timing-function: ease-in
+}
+
+.tab{
+    position: absolute;
+    transform: translate(-2vw,9.2vw);
+    color: #222222;
+    z-index: -10;
+}
 .effects{
     bottom: -0.5vw;
     right: -1vw;
@@ -159,8 +173,11 @@ a:hover{
     right:3.3%;
     width: 65%;
 }
-.overflow{
-    overflow: visible;
+.white-glow2{
+    position: absolute;
+    box-shadow: 0 0 1vw 2vw #FFFFFF;
+    width: auto;
+    height: auto;
 }
 .midnight-glow{
     height: 0;
@@ -199,10 +216,42 @@ a:hover{
     0 0 15.5vw 10vw #FFFF00,
     0 0 15vw 11vw #FF00FF;
 }
-.sunset-glow:hover{
-    transform: scale(1.24);
-}
 
+.spectra-glow{
+    height: 0;
+    width: 20vw;
+    position: absolute;
+    transform: translate(10vw, 6vw);
+    border-radius: 0%;
+    opacity: 5%;
+    box-shadow:
+    0 0 15vw 15vw #ffffff83,
+    0 0 35.5vw 15vw #e1a1ff50,
+    0 0 35vw 15vw #470505;
+    animation-name: appear-spectra;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+.rotate{
+    transform: rotate(37deg);
+    position: absolute;
+}
+.pulse{
+    animation-name: pulse;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.slide-in-from-text-right{
+    animation-name: slide-in-from-text-right;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes appear-spectra{
+    0% {opacity: 0%;}
+    75% {opacity: 0%;}
+    100% {opacity: 5%;}
+}
 @keyframes appear{
     from {opacity: 0%;}
     to {opacity: 100%;}
@@ -221,6 +270,11 @@ a:hover{
     33% {opacity: 0%}
     100% {opacity: 40%;}
 } 
+@keyframes appear-lower-text{
+    0% {opacity: 0%;}
+    33% {opacity: 0%}
+    100% {opacity: 100%;}
+} 
 
 @keyframes bounce_glow_text {
     0% {text-shadow: 0 0 5vw #000000;}
@@ -230,4 +284,15 @@ a:hover{
 @keyframes rotate{
     from {transform:rotate(0d);}
     to {transform: rotate(360d);}
+}
+@keyframes pulse{
+    0% {box-shadow: 0 0 6vw 1vw #555555;}
+    25% {box-shadow: 0 0 6vw 1vw #FFFFFF;}
+    50% {box-shadow: 0 0 6vw 1vw #555555;}
+    100% {box-shadow: 0 0 6vw 1vw #555555;}
+}
+@keyframes slide-in-from-text-right{
+    0% {opacity: 0%; transform: translate(0vw,9.2vw); color: #111111}
+    50% {opacity: 0%; transform: translate(0vw,9.2vw); color: #111111;}
+    100% {opacity: 100%; transform: translate(-2vw,9.2vw); color: #222222;}
 }
