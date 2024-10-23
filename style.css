@@ -129,6 +129,21 @@ a:hover{
     animation-duration: 1s;
     animation-timing-function: ease-in-out
 }
+.fade-in1{
+    animation-name: appear1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out
+}
+.fade-in2{
+    animation-name: appear2;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out
+}
+.fade-in3{
+    animation-name: appear3;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out
+}
 .effects{
     bottom: -0.5vw;
     right: -1vw;
@@ -151,19 +166,20 @@ a:hover{
     height: 0;
     width: 0;
     position: absolute;
-    transform: translate(-25vw, -10vw);
+    transform: scale(3,3);
+    transform: translate(-25vw, -16vw);
     border-radius: 0%;
     opacity: 35%;
     box-shadow:
-    0 0 10vw 5vw #ffd7ff,
-    0 0 15.5vw 10vw #fb00ff,
-    0 0 15vw 11vw #611b9e;
+    0 0 10vw 6vw #ffd7ff,
+    0 0 15.5vw 11vw #fb00ff,
+    0 0 15vw 12vw #611b9e;
 }
 .bluesky-glow{
     height: 0;
     width: 0;
     position: absolute;
-    transform: translate(-10vw, -25vw);
+    transform: translate(-10vw, -35vw);
     border-radius: 0%;
     opacity: 40%;
     box-shadow:
@@ -175,7 +191,7 @@ a:hover{
     height: 0;
     width: 0;
     position: absolute;
-    transform: translate(-3vw, -3vw);
+    transform: translate(-3.5vw, -4vw);
     border-radius: 0%;
     opacity: 70%;
     box-shadow:
@@ -190,7 +206,22 @@ a:hover{
 @keyframes appear{
     from {opacity: 0%;}
     to {opacity: 100%;}
+}
+@keyframes appear1{
+    from {opacity: 0%;}
+    to {opacity: 70%;}
+}
+@keyframes appear2{
+    0% {opacity: 0%;}
+    23% {opacity: 0%;}
+    100% {opacity: 35%;}
 } 
+@keyframes appear3{
+    0% {opacity: 0%;}
+    33% {opacity: 0%}
+    100% {opacity: 40%;}
+} 
+
 @keyframes bounce_glow_text {
     0% {text-shadow: 0 0 5vw #000000;}
     5% {text-shadow: 0 0 5vw rgb(255, 255, 255);}
