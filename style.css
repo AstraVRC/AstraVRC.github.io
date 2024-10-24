@@ -99,7 +99,7 @@ main{
 a{
     color: inherit;
     text-decoration: inherit;
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 a:hover{
     transform: scale(1.1,1.1);
@@ -139,6 +139,11 @@ a:hover{
 .fade-in2{
     animation-name: appear2;
     animation-duration: 1.3s;
+    animation-timing-function: ease-in-out
+}
+.fade-in2-text{
+    animation-name: appear2;
+    animation-duration: 1.5s;
     animation-timing-function: ease-in-out
 }
 .fade-in3{
