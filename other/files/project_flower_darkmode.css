@@ -158,6 +158,7 @@ output {
     color:#bbb;
     border: 1px solid #333
 }
+.list-group-item:last-child{}
 
 a.list-group-item,
 button.list-group-item {
@@ -257,10 +258,12 @@ background-color:#333;
     background-color: #2F95CE;
     color: white;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFD9EDF7", endColorstr="#FFC4E3F3", GradientType=0);
-    background-repeat: repeat-x
-    background-image: none;
+    background-repeat: repeat-x;
     background-image: none;
     border-bottom: 0;
+}
+.panel>.list-group:last-child .list-group-item:last-child, .panel>.panel-collapse>.list-group:last-child .list-group-item:last-child{
+    border-bottom: 1px solid #3097d1;
 }
 
 .site-wrapper {
