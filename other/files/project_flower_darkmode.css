@@ -133,8 +133,8 @@ output {
     z-index: 3;
     color: #fff;
     cursor: default;
-    background-color: #d35ee2;
-    border-color: #d35ee2
+    background-color: #3097d1;
+    border-color: #3097d1
 }
 
 .pagination>.disabled>a,
